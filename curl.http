@@ -1,0 +1,14 @@
+curl --location --request GET 'http://localhost:8080/products' \
+--header 'Content-Type: application/json'
+
+###
+
+curl --location --request POST 'http://localhost:8080/products' \
+--header 'Content-Type: application/json' \
+--data-raw '{ "name": "maggi", "description": "in 2min", "price": 7.33 }' | jq
+
+###
+
+# send requste to update product
+curl --location --request PUT 'http://localhost:8080/products/121' \
+--header 'Content-Type: application/json'
